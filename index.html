@@ -1,4 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-[Previous HTML code here]
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social & Dating Skills Mastery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        font-size: 32px;
+        color: #1a1a1a;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: #2a2a2a;
+        margin-top: 20px;
+    }
+
+    .subtitle {
+        color: #666;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .primary-btn {
+        background: #3b82f6;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .secondary-btn {
+        background: #1a1a1a;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .dating-btn {
+        background: #e91e63;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .section-btn {
+        display: block;
+        width: fit-content;
+        padding: 10px 20px;
+        margin: 10px 0;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: left;
+        transition: all 0.3s ease;
+    }
+
+    .section-btn:hover {
+        background: #f5f5f5;
+        transform: translateX(5px);
+    }
+
+    .content {
+        display: none;
+        padding: 20px;
+        margin-top: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #3b82f6;
+    }
+
+    .dating-content {
+        border-left: 4px solid #e91e63;
+    }
+
+    .quote {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+    }
+
+    .quote-mark {
+        font-size: 48px;
+        color: #666;
+    }
+
+    .quote-text {
+        font-size: 20px;
+        color: #333;
+        margin-left: 20px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin: 10px 0;
+        color: #444;
+        line-height: 1.6;
+    }
+
+    .tip-box {
+        background: #fff;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+    }
+
+    .warning {
+        color: #dc3545;
+        font-style: italic;
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Social & Dating Skills Mastery (2024)</h1>
+        <div class="subtitle">Key insights for authentic connection, communication, and relationships</div>
+        <div class="nav-buttons">
+        <button class="primary-btn" onclick="showAll()">View All</button>
+        <button class="secondary-btn" onclick="showCoreSkills()">Core Skills</button>
+        <button class="dating-btn" onclick="showDating()">Dating Skills</button>
+    </div>
+
+    <!-- Social Skills Sections -->
+    <button class="section-btn" onclick="toggleSection('communication')">Communication & Connection</button>
+    <div id="communication" class="content">
+        <h3>Key Insights:</h3>
+        <ul>
+            <li>The 3-Second Rule: When you have an impulse to say something, act within 3 seconds</li>
+            <li>Conversation Threading: Pick any word from their last sentence to branch into a new topic</li>
+            <li>The Echo Method: Repeat the last 2-3 words someone said as a question</li>
+            <li>Golden Ratio: For every question you ask, share a related insight</li>
+        </ul>
+        <h3>Practical Tips:</h3>
+        <ul>
+            <li>Start with shared experiences</li>
+            <li>Use 'and' instead of 'but' when building on points</li>
+            <li>Share appropriate vulnerabilities</li>
+            <li>Make observations rather than judgments</li>
+        </ul>
+    </div>
+
+    <button class="section-btn" onclick="toggleSection('body')">Body Language & Presence</button>
+    <div id="body" class="content">
+        <h3>Key Insights:</h3>
+        <ul>
+            <li>The Triangle Method: Switch eye contact between both eyes and mouth</li>
+            <li>Power Posing: Open posture increases confidence hormones</li>
+            <li>The 60% Rule: Maintain eye contact 60% while speaking, 80% while listening</li>
+            <li>Voice Projection: Speak from your diaphragm</li>
+        </ul>
+        <h3>Practical Tips:</h3>
+        <ul>
+            <li>Keep hands visible and relaxed</li>
+            <li>Face others with your heart center</li>
+            <li>Use natural gestures</li>
+            <li>Take up appropriate space</li>
+        </ul>
+    </div>
+
+    <button class="section-btn" onclick="toggleSection('trust')">Trust & Authenticity</button>
+    <div id="trust" class="content">
+        <h3>Key Insights:</h3>
+        <ul>
+            <li>The FORD Method: Family, Occupation, Recreation, Dreams</li>
+            <li>Active Acknowledgment: Show understanding before sharing</li>
+            <li>Vulnerability Loop: Share appropriately to invite openness</li>
+            <li>Trust Battery: Build trust through consistent actions</li>
+        </ul>
+        <h3>Practical Tips:</h3>
+        <ul>
+            <li>Keep confidences absolutely</li>
+            <li>Admit mistakes quickly</li>
+            <li>Follow through on commitments</li>
+            <li>Show consistency in words and actions</li>
+        </ul>
+    </div>
+
+    <!-- Dating Skills Sections -->
+    <button class="section-btn" onclick="toggleSection('authentic-attraction')">Authentic Attraction</button>
+    <div id="authentic-attraction" class="content dating-content">
+        <h3>Key Principles:</h3>
+        <ul>
+            <li>Be genuine in your approach - authenticity is magnetic</li>
+            <li>Focus on creating a real connection rather than impressing</li>
+            <li>Show interest through active listening and thoughtful questions</li>
+            <li>Express yourself honestly while respecting boundaries</li>
+        </ul>
+        <h3>Practical Tips:</h3>
+        <ul>
+            <li>Share your passions - enthusiasm is attractive</li>
+            <li>Notice and appreciate unique qualities in others</li>
+            <li>Be present in conversations rather than planning what to say next</li>
+            <li>Show vulnerability appropriately to deepen connections</li>
+        </ul>
+    </div>
+
+    <button class="section-btn" onclick="toggleSection('dating-communication')">Dating Communication</button>
+    <div id="dating-communication" class="content dating-content">
+        <h3>Key Insights:</h3>
+        <ul>
+            <li>The 70/30 Rule: Listen 70% of the time, speak 30%</li>
+            <li>Use open-ended questions to discover shared values</li>
+            <li>Pay attention to non-verbal cues and emotional tone</li>
+            <li>Express interest clearly while respecting boundaries</li>
+        </ul>
+        <div class="tip-box">
+            <strong>First Date Conversation Starters:</strong>
+            <ul>
+                <li>"What's the best thing that happened to you this week?"</li>
+                <li>"What are you most passionate about right now?"</li>
+                <li>"What's the best place you've traveled to?"</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="section-btn" onclick="toggleSection('building-connection')">Building Deep Connections</button>
+    <div id="building-connection" class="content dating-content">
+        <h3>Key Elements:</h3>
+        <ul>
+            <li>Create emotional safety through consistency and reliability</li>
+            <li>Share experiences that create lasting memories</li>
+            <li>Show appreciation for both big and small things</li>
+            <li>Support each other's growth and independence</li>
+        </ul>
+        <h3>Connection Deepeners:</h3>
+        <ul>
+            <li>Share your values and listen to theirs</li>
+            <li>Create shared traditions and rituals</li>
+            <li>Be there during both good times and challenges</li>
+            <li>Express gratitude specifically and often</li>
+        </ul>
+    </div>
+
+    <button class="section-btn" onclick="toggleSection('healthy-boundaries')">Healthy Boundaries & Respect</button>
+    <div id="healthy-boundaries" class="content dating-content">
+        <h3>Foundation Principles:</h3>
+        <ul>
+            <li>Respect for personal space and time</li>
+            <li>Clear communication about needs and limits</li>
+            <li>Accepting "no" gracefully</li>
+            <li>Maintaining individual identity within relationships</li>
+        </ul>
+        <div class="warning">
+            Remember: Healthy relationships are built on mutual respect, trust, and clear communication.
+        </div>
+    </div>
+
+    <div class="quote">
+        <span class="quote-mark">"</span>
+        <span class="quote-text">The best relationships start with genuine friendship and grow through mutual respect.</span>
+    </div>
+</div>
+
+<script>
+    function toggleSection(id) {
+        $('#' + id).slideToggle();
+    }
+
+    function showAll() {
+        $('.content').slideDown();
+    }
+
+    function showCoreSkills() {
+        $('.content').slideUp();
+        $('#communication').slideDown();
+        $('#body').slideDown();
+    }
+
+    function showDating() {
+        $('.content').slideUp();
+        $('#authentic-attraction').slideDown();
+        $('#dating-communication').slideDown();
+        $('#building-connection').slideDown();
+        $('#healthy-boundaries').slideDown();
+    }
+</script>
+</body>
 </html>
